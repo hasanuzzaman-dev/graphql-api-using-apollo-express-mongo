@@ -20,8 +20,9 @@ async function startServer() {
         res.send('Hello from express apollo server');
     });
 
-    const mongodbUri = 'mongodb://127.0.0.1:27017/graphql_post_db';
-    const port = 8080;
+    //const mongodbUri = 'mongodb://127.0.0.1:27017/graphql_post_db';
+    const mongodbUri = 'mongodb+srv://hasan-cpl:UTRkSoWxj4MnSoiO@cluster0.227ifla.mongodb.net/graphql_post_db';
+    const port = 4000;
 
     // Connect to MongoDB
     mongoose.connect(mongodbUri, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -36,7 +37,7 @@ async function startServer() {
             console.error('Error connecting to MongoDB:', error);
         });
 
-   // app.listen(4000, () => console.log('Server in running on Port: 4000'))
+    // app.listen(4000, () => console.log('Server in running on Port: 4000'))
 }
 
 startServer();
